@@ -1,0 +1,38 @@
+{
+  "name": "@hillwoodpark/http-response-errors",
+  "version": "0.0.1",
+  "description": "Error classes for HTTP errors in Node.js",
+  "keywords": [
+    "Node",
+    "HTTP Error",
+    "HTTP Exception",
+    "Error",
+    "Exception",
+    "Fetch API"
+  ],
+  "homepage": "https://github.com/HillwoodPark/http-response-errors#readme",
+  "bugs": {
+    "url": "https://github.com/HillwoodPark/http-response-errors/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HillwoodPark/http-response-errors.git"
+  },
+  "license": "MIT",
+  "author": "Tim Johns",
+  "type": "module",
+  "exports": {
+      ".": "./dist/httpResponseErrors.js"
+  },
+  "types": "./dist/httpResponseErrors.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "NODE_OPTIONS='--trace-deprecation' vitest --typecheck.enabled --typecheck.checker=tsc"
+  },
+  "devDependencies": {
+    "@types/node": "22.13.10",
+    "tsx": "4.19.3",
+    "typescript": "5.8.2",
+    "vitest": "3.0.9"
+  }
+}
