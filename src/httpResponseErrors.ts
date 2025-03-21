@@ -437,7 +437,10 @@ export function createHTTPResponseError(statusCode: number, message?: string): H
     case 508: return new HTTPLoopDetectedError(message);
     case 510: return new HTTPNotExtendedError(message);
     case 511: return new HTTPNetworkAuthenticationRequiredError(message);
-    default: return new HTTPResponseError(statusCode, "HTTP Error", message);
+    default: 
+      if(statusCode >= 400 && statusCode <= 499) return new HTTPClientResponseError(statusCode, "HTTP Client Response Error", message);
+      if(statusCode >= 500 && statusCode <= 599) return new HTTPServerResponseError(statusCode, "HTTP Server Response Error", message);
+      return new HTTPResponseError(statusCode, "HTTP Error", message);
   }
 }
 
