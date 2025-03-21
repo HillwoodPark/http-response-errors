@@ -10,6 +10,24 @@ import {
 
 describe('httpErrors', () => {
 
+  describe('when caught', () => {
+
+    it('should allow us to use instanceOf to determine error handling semantics in a heirarchical fashion', () => {
+      
+      try {
+        throw new HTTPBadRequestError()
+      } catch(e) {
+        expect(e).toBeInstanceOf(HTTPBadRequestError); // e.g. If we wanted special handling for this VERY SPECIFIC error code
+        expect(e).toBeInstanceOf(HTTPClientResponseError); // e.g. If we wanted special handling for this relatively generic error case
+        expect(e).toBeInstanceOf(HTTPResponseError); // e.g. If we wanted special handling for this generic error case
+        expect(e).toBeInstanceOf(Error); // e.g. If we just wanted JavaScript's error handling semantincs to just make sense
+      }
+
+    })
+
+  });
+
+
   describe('createHTTPResponseError', () => {
 
     describe('with a well-known client error response code (e.g. 400)', () => {
@@ -211,6 +229,7 @@ describe('httpErrors', () => {
 
 
   });
+
 
 })
 
