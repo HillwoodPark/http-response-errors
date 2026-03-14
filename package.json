@@ -1,6 +1,6 @@
 {
   "name": "@hillwoodpark/http-response-errors",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Error classes for HTTP errors in Node.js",
   "keywords": [
     "Node",
@@ -25,7 +25,7 @@
   },
   "type": "module",
   "exports": {
-      ".": "./dist/httpResponseErrors.js"
+    ".": "./dist/httpResponseErrors.js"
   },
   "types": "./dist/httpResponseErrors.d.ts",
   "scripts": {
