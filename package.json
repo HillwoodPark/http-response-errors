@@ -1,6 +1,6 @@
 {
   "name": "@hillwoodpark/http-response-errors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Error classes for HTTP errors in Node.js",
   "keywords": [
     "Node",
