@@ -1,5 +1,7 @@
 
 ![Vitest](https://github.com/HillwoodPark/http-response-errors/actions/workflows/vitest.yml/badge.svg)
+[![Workflow Lint](https://github.com/HillwoodPark/http-response-errors/actions/workflows/workflow-lint.yml/badge.svg)](https://github.com/HillwoodPark/http-response-errors/actions/workflows/workflow-lint.yml)
+[![Audited by zizmor](https://img.shields.io/badge/audited%20by-zizmor-purple)](https://github.com/zizmorcore/zizmor)
 
 # Hillwood Park HTTP Response Errors
 
